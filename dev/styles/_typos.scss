@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,300,400,900");
+
+/*----------------------------------------------------------------------------------------------*/
+/* TYPOS */
+/*----------------------------------------------------------------------------------------------*/
+html {
+  font-family: $font-family-main;
+  color: $color-grey1;
+  background-color: white;
+  font-weight: $font-weight-1;
+}
+
+p {
+  font-size: $font-size-m;
+}
+
+a {
+  color: $color-grey1;
+  text-decoration: none;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.icon {
+  font-size: $font-size-l;
+  z-index: 100;
+}
+// SIZE
+.is-xxs {
+  font-size: $font-size-xxs !important;
+}
+.is-xs {
+  font-size: $font-size-xs !important;
+}
+.is-s {
+  font-size: $font-size-s !important;
+}
+.is-m {
+  font-size: $font-size-m !important;
+}
+.is-l {
+  font-size: $font-size-l !important;
+  @media screen and (max-width: $width-xs) {
+    font-size: 1.2em !important;
+  }
+}
+.is-xl {
+  font-size: $font-size-xl !important;
+  @media screen and (max-width: $width-xs) {
+    font-size: $font-size-l !important;
+  }
+}
+.is-xxl {
+  font-size: $font-size-xxl !important;
+  @media screen and (max-width: $width-xs) {
+    font-size: $font-size-l !important;
+  }
+  @media screen and (max-width: $width-xxs) {
+    font-size: $font-size-m !important;
+  }
+}
+
+// WEIGHT
+.weight-100 {
+  font-weight: $font-weight-1 !important;
+}
+.weight-300 {
+  font-weight: $font-weight-2 !important;
+}
+.weight-400 {
+  font-weight: $font-weight-3 !important;
+}
+.weight-900,
+b,
+strong {
+  font-weight: $font-weight-4 !important;
+}
+
+// TEXT-ALIGN
+$values: ("left") (left), ("center") (center), ("right") (right);
+
+@each $i in $values {
+  .text-#{nth($i, 1)} {
+    text-align: #{nth($i, 2)} !important;
+  }
+}
+
+.title1 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-4;
+  margin-bottom: 50px;
+}
+
+ul.socialLinks {
+  @media screen and (max-width: $width-xs) {
+    display: flex;
+    margin-top: 100px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-orange;
+    font-size: $font-size-l;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    i {
+      color: $color-grey1;
+    }
+    &:hover {
+      background-color: white;
+    }
+    @media screen and (max-width: $width-xs) {
+      margin: 0;
+    }
+  }
+}
